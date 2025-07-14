@@ -1,3 +1,42 @@
+<!DOCTYPE html>
 <html>
+<head>
+  <title>Welcome Page</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      padding-top: 100px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
 
+  <h1>Welcome to My AWS-Powered Web Page!</h1>
+  <p id="greeting">Click the button to get a greeting:</p>
+  <button onclick="showGreeting()">Get Greeting</button>
+
+  <script>
+    function showGreeting() {
+      const greetings = [
+        "Hello there!",
+        "Welcome to the cloud ☁️",
+        "You're amazing!",
+        "This site is hosted on AWS!",
+        "JavaScript rocks!"
+      ];
+      const randomIndex = Math.floor(Math.random() * greetings.length);
+      document.getElementById("greeting").textContent = greetings[randomIndex];
+    }
+  </script>
+
+</body>
 </html>
+
+
+
